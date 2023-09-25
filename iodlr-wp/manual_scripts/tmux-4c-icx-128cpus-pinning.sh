@@ -32,7 +32,7 @@ tmux select-layout tiled
 tmux split-window -v 
 tmux send-keys "sudo docker run -it --rm --privileged --ulimit memlock=-1:-1 --cpuset-cpus=\"16-23,80-87\" --cpuset-mems=\"0\" --entrypoint bash ${image_name}"
 tmux split-window -h 
-tmux send-keys "sudo docker run -it --rm --privileged --ulimit memlock=-1:-1 --cpuset-cpus=\"24-31,88-95\" --cpuset-mems=\"1\" --entrypoint bash ${image_name}"
+tmux send-keys "sudo docker run -it --rm --privileged --ulimit memlock=-1:-1 --cpuset-cpus=\"24-31,88-95\" --cpuset-mems=\"0\" --entrypoint bash ${image_name}"
 
 tmux select-layout tiled
 tmux setw synchronize-panes
